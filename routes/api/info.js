@@ -13,13 +13,13 @@ router
   .delete(infoController.remove);
 
 router
-  .route("/serialNumber")
+  .route("/:serialNumber")
   .get(infoController.findBySerialNumber)
   .put(infoController.update)
   .delete(infoController.remove);
 
 router
-  .route("endUser")
+  .route("/:endUser")
   .get(infoController.findByEndUser)
   .put(infoController.update)
   .delete(infoController.remove);
