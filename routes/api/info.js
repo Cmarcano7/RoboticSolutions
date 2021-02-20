@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const infoController = require("../../controllers/infoController");
-const reviewController = require("../../controllers/infoController");
 
 router.route("/")
   .get(infoController.findAll)
