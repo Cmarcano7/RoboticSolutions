@@ -11,3 +11,80 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* NavBar CSS Code */
+#logInInfo {
+  float:right;
+}
+
+/* Header CSS Code */
+#division, #logInInfo {
+  font-size: 15px ;
+}
+
+#SignOutBtn {
+  float: right;
+}
+
+/* MainFooter CSS Code */
+#NewItem {
+  color: white;
+  background-color: blue;
+  font-weight: bold;
+  float: right;
+  font-size: 12px;
+}
+
+/* VersionInfo CSS Code */
+#versionInfo {
+  font-size: 10px;
+  font-weight: bold
+}
+
+/* AddInfo Footer CSS Code */
+#AddBtn {
+  color: white;
+  background-color: red;
+  font-weight: bold;
+  float: right;
+  margin-right: 8px;
+}
+
+#UpdateBtn {
+  color: white;
+  background-color: blue;
+  font-weight: bold;
+  float: right;
+}
+
+#inputLabels {
+  font-size: 13px;
+}
+
+.form-control-sm{
+  font-size: 13px;
+}
+
+#notesField {
+  font-size: 13px;
+}
+
+#Stages {
+margin-bottom: 12px;
+}
+
+#addInfoPage {
+  margin: 5px;
+}
+
+/* AddInfo Page CSS items */
+#mainInfo {
+  margin-top: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#integration {
+  margin-right: 5px;
+}
+
