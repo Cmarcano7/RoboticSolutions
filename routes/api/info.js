@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const infoController = require("../../controllers/infoController");
-const reviewController = require("../../controllers/infoController");
 
 router.route("/")
   .get(infoController.findAll)
@@ -13,13 +12,13 @@ router
   .delete(infoController.remove);
 
 router
-  .route("/serialNumber")
+  .route("/:serialNumber")
   .get(infoController.findBySerialNumber)
   .put(infoController.update)
   .delete(infoController.remove);
 
 router
-  .route("endUser")
+  .route("/:endUser")
   .get(infoController.findByEndUser)
   .put(infoController.update)
   .delete(infoController.remove);
