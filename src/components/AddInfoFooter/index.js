@@ -6,6 +6,7 @@ import Version from '../VersionInfo';
 function AddInfoFooter() {
 
     const history = useHistory();
+    
     const routeChange = () =>{ 
         let path = `/`; 
         history.push(path);
