@@ -1,29 +1,31 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {} from 'react-router-dom';
-import {Row, Col, Card, Container} from 'react-bootstrap';
 import PlantIntegration from '../Processes/PIInfo';
 import Optimization from '../Processes/Optimization';
 import Validation from '../Processes/Validiation';
 import Notes from '../Notes';
+import '../process.css';
 
-class AddInfoGroup extends Component {
-    render() {
+function AddInfoGroup () {
     return(
-        <Container fluid>
-            <Row>
-                <Card style={{margin: 15, border: 0, width: '20 rem'}}>
+        <div className='container fluid'>
+            <div className='row'>
+                <div className='col-sm'>   
                 <PlantIntegration />
-                </Card>
-                <Card style={{border: 0, width: '15 rem'}}>
+                </div>
+                <div className='col-sm'> 
                 <Optimization />
-                </Card>
-                <Card style={{border: 0, width: '15 rem'}}>
+                </div>
+                <div className='col-sm'> 
                 <Validation />
-                </Card>
-            </Row>
-            <Notes />
-        </Container>
+                </div>
+            </div>
+            <div className='row'>
+                <div className='col-12'>
+                <Notes />
+                </div>
+            </div>
+        </div>
     )
-}
 }
 export default AddInfoGroup;
