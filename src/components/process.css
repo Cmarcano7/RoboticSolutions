@@ -1,0 +1,40 @@
+input[type="text"] {
+    font-size:12px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+input {
+    height:25px;
+    width:220px;
+}
+
+#formLabel {
+    font-size: 12px;
+    float:left; width: 85px; text-align:left; margin-right:5px;
+
+}#formGroup{
+    display:inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#oFormLabel {
+    font-size: 12px;
+    float:left; width:88px; text-align:left; margin-right:5px;
+
+}#oFormGroup{
+    display:inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#vFormLabel {
+    font-size: 12px;
+    float:left; width:110px; text-align:left; margin-right:5px;
+
+}#vFormGroup{
+    display:inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
