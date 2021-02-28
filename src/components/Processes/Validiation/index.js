@@ -1,66 +1,58 @@
+import { TextareaAutosize } from '@material-ui/core';
 import React from 'react';
 import {} from 'react-router-dom';
-import {Row, Col, Form} from 'react-bootstrap';
+import '../../process.css';
 
 function Validation() {
     return(
-        <Form id='Stages' fluid='md'>
+        <form id='Stages' fluid='md'>
             <h5>Validation</h5>
-            <Form.Group as={Row}  controlId='formVLFR'>
-                <Form.Label id='inputLabels'column sm={2}>Validation Location:</Form.Label>
-                <Col sm={10}>
-                <Form.Control size='sm' type='VLFR' placeholder='' />
-                </Col>
-            </Form.Group>
-            <Form.Group as={Row} controlId='formDOVFR'>
-                <Form.Label id='inputLabels'column sm={2}>Date of Validation:</Form.Label>
-                <Col sm={10}>
-                <Form.Control size='sm' type='DOVFR' placeholder='' />
-                </Col>
-            </Form.Group>
-            <Form.Group as={Row} controlId='formLTPVFR'>
-                <Form.Label id='inputLabels'column sm={2}>Leoni Technician who Performed Validation:</Form.Label>
-                <Col sm={10}>
-                <Form.Control size='sm' type='LTPVFR' placeholder='' />
-                </Col>
-            </Form.Group>
-            <Form.Group as={Row} controlId='formAUIFR'>
-                <Form.Label id='inputLabels'column sm={2}>Any Unresolved Issues Y/N:</Form.Label>
-                <Col sm={10}>
-                <Form.Control size='sm' type='AUIFR' placeholder='' />
-                </Col>
-            </Form.Group>
-            <Form.Group as={Row} controlId='formDIRVIFR'>
-                <Form.Label id='inputLabels'column sm={2}>Date Integrator Resolved Validation Issues:</Form.Label>
-                <Col sm={10}>
-                <Form.Control size='sm' type='DIRVIFR' placeholder='' />
-                </Col>
-            </Form.Group>
-            <Form.Group as={Row} controlId='formSWEDFR'>
-                <Form.Label id='inputLabels'column sm={2}>SOP / Warranty Effective Date:</Form.Label>
-                <Col sm={10}>
-                <Form.Control size='sm' type='SWEDFR' placeholder='' />
-                </Col>
-            </Form.Group>
-            <Form.Group as={Row} controlId='formWEDFR'>
-                <Form.Label id='inputLabels'column sm={2}>Warranty Expiration Date:</Form.Label>
-                <Col sm={10}>
-                <Form.Control size='sm' type='WEDFR' placeholder='' />
-                </Col>
-            </Form.Group>
-            <Form.Group as={Row} controlId='formFIDFR'>
-                <Form.Label id='inputLabels'column sm={2}>Final Inspection Date:</Form.Label>
-                <Col sm={10}>
-                <Form.Control size='sm' type='FIDFR' placeholder='' />
-                </Col>
-            </Form.Group>
-            <Form.Group as={Row} controlId='formRPVDPNFR'>
-                <Form.Label id='inputLabels'column sm={2}>Robot Programs Verified Document Program Names:</Form.Label>
-                <Col sm={10}>
-                <Form.Control size='sm' type='RPVDPNFR' placeholder='' />
-                </Col>
-            </Form.Group>
-        </Form>
+            <div id='vFormGroup'className='formLabel-group'>
+                <label id='vFormLabel'>
+                Validation Location:</label>
+                <input type="text" />
+            </div>
+            <div style={{marginTop:20}}id='vFormGroup'className='formLabel-group'>
+            <label id='vFormLabel'>
+                Date of Validation:</label>
+                <input type="text" />
+            </div>
+            <div id='vFormGroup'className='formLabel-group'>
+            <label id='vFormLabel'>
+                Leoni Technician who Performed Validation:</label>
+                <input type="text" />
+            </div>
+            <div id='vFormGroup'className='formLabel-group'>
+            <label id='vFormLabel'>
+                Any Unresolved Issues Y/N:</label>
+                <input type="text" />
+            </div>
+            <div id='vFormGroup'className='formLabel-group'>
+            <label id='vFormLabel'>
+                Date Integrator Resolved Validation Issues:</label>
+                <input type="text" />
+            </div>
+            <div id='vFormGroup'className='formLabel-group'>
+            <label id='vFormLabel'>
+                SOP/Warranty Effective Date:</label>
+                <input type="text" />
+            </div>
+            <div id='vFormGroup'className='formLabel-group'>
+            <label id='vFormLabel'>
+                Warranty Expiration Date:</label>
+                <input type="text" />
+            </div>
+            <div id='vFormGroup'className='formLabel-group'>
+            <label id='vFormLabel'>
+                Final Inspection Date:</label>
+                <input type="text" />
+            </div>
+            <div id='vFormGroup'className='formLabel-group'>
+            <label id='vFormLabel'>
+                Robot Programs Verified Document Program Names:</label>
+                <TextareaAutosize style={{fontSize:12, width:220}} type="text" />
+            </div>
+        </form>
     )
 }
 export default Validation;

@@ -1,60 +1,52 @@
 import React from 'react';
 import {} from 'react-router-dom';
-import {Row, Col, Form} from 'react-bootstrap';
+import '../../process.css';
 
 function PlantIntegration() {
     return(
-        <Form id='integration'>
-            <h5 id='Stages'>Plant & Integrator Infomation</h5>
-            <Form.Group as={Row}  controlId='formRobotType'>
-                <Form.Label id='inputLabels'column sm={3.5}>Robot Type/Model:</Form.Label>
-                <Col sm={8.5}>
-                <Form.Control size='sm' type='RobotType' placeholder='' />
-                </Col>
-            </Form.Group>
-            <Form.Group as={Row} controlId='formRobotApp'>
-                <Form.Label id='inputLabels'column sm={2}>Robot Application:</Form.Label>
-                <Col sm={10}>
-                <Form.Control size='sm' type='RobotApp' placeholder='' />
-                </Col>
-            </Form.Group>
-            <Form.Group as={Row} controlId='formSerialNum'>
-                <Form.Label id='inputLabels'column sm={2}>Serial Number/F #:</Form.Label>
-                <Col sm={10}>
-                <Form.Control size='sm' type='serialNum' placeholder='' />
-                </Col>
-            </Form.Group>
-            <Form.Group as={Row} controlId='formCPL'>
-                <Form.Label id='inputLabels'column sm={2}>Customer & Plant Location:</Form.Label>
-                <Col sm={10}>
-                <Form.Control size='sm' type='CPL' placeholder='' />
-                </Col>
-            </Form.Group>
-            <Form.Group as={Row} controlId='formInLO'>
-                <Form.Label id='inputLabels'column sm={2}>Integrator/ Line Owner:</Form.Label>
-                <Col sm={10}>
-                <Form.Control size='sm' type='InLO' placeholder='' />
-                </Col>
-            </Form.Group>
-            <Form.Group as={Row} controlId='formStaRobId'>
-                <Form.Label id='inputLabels'column sm={2}>Station / Robot ID:</Form.Label>
-                <Col sm={10}>
-                <Form.Control size='sm' type='StaRobId' placeholder='' />
-                </Col>
-            </Form.Group>
-            <Form.Group as={Row} controlId='formSysLine'>
-                <Form.Label id='inputLabels'column sm={2}>System / Line:</Form.Label>
-                <Col sm={10}>
-                <Form.Control size='sm' type='SysLine' placeholder='' />
-                </Col>
-            </Form.Group>
-            <Form.Group as={Row} controlId='formLeoniPD'>
-                <Form.Label id='inputLabels'column sm={2}>Leoni PD#:</Form.Label>
-                <Col sm={10}>
-                <Form.Control size='sm' type='LeoniPD' placeholder='' />
-                </Col>
-            </Form.Group>
-        </Form>
+    <form id='integration'>
+            <h5  id='Stages'>Plant & Integrator Infomation</h5>
+            <div id='formGroup'className='formLabel-group'>
+                <label id='formLabel'>
+                Robot Type/Model:</label>
+                <input type="text" />
+            </div>
+            <div id='formGroup'className='formLabel-group'>
+            <label id='formLabel'>
+                Robot Application:</label>
+                <input type="text" />
+            </div>
+            <div id='formGroup'className='formLabel-group'>
+            <label id='formLabel'>
+                Serial Number/F #:</label>
+                <input type="text" />
+            </div>
+            <div id='formGroup'className='formLabel-group'>
+            <label id='formLabel'>
+                Customer & Plant Location:</label>
+                <input type="text" />
+            </div>
+            <div id='formGroup'className='formLabel-group'>
+            <label id='formLabel'>
+                Integrator/Line Owner:</label>
+                <input type="text" />
+            </div>
+            <div id='formGroup'className='formLabel-group'>
+            <label id='formLabel'>
+                Station/Robot ID:</label>
+                <input type="text" />
+            </div>
+            <div id='formGroup'className='formLabel-group'>
+            <label id='formLabel'>
+                System/Line:</label>
+                <input type="text" />
+            </div>
+            <div style={{marginTop:15}} id='formGroup'className='formLabel-group'>
+            <label id='formLabel'>
+                Leoni PD#:</label>
+                <input type="text" />
+            </div>
+        </form>
     )
 }
 export default PlantIntegration;

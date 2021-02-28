@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import {Row} from 'react-bootstrap';
 import DataTable from 'react-data-table-component';
 
-const data = [{ id: 1, rtm: 'R2000iC210F', robapp: 'Drill+Vision', SNF: 'F196331' }, { id: 2, rtm: 'R2000iC210F', robapp: 'Drill+Vision', SNF: 'F196331' }];
+const data = [{ id: 1, rtm: 'R2000iC210F', robapp: 'Drill+Vision', SNF: 'F196331' }, { id: 2, rtm: 'R2000iC210F', robapp: 'Drill+Vision', SNF: 'F196332' }];
 
 // const subheader = [
 //   {
@@ -16,6 +17,13 @@ const data = [{ id: 1, rtm: 'R2000iC210F', robapp: 'Drill+Vision', SNF: 'F196331
 // ]
 
 const columns = [
+
+  {
+    cell:() => <button>Update</button>, // onClick={route to get specific id} needs to be added inside <button>
+    ignoreRowClick: true,
+    allowOverflow: true,
+    button: true,
+  },
   
   {
     name: 'Robot Type/Model',
@@ -183,9 +191,11 @@ const columns = [
     },
   };
 
+
 class DataSheet extends Component {
   render() {
     return (
+      <Row>
       <DataTable
         title="Master Dress Pack Buy-Off Matrix "
         columns={columns}
@@ -194,6 +204,7 @@ class DataSheet extends Component {
         highlightOnHover
         dense
       />
+      </Row>
     );
   }
 };

@@ -58,33 +58,29 @@ code {
 }
 
 #inputLabels {
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .form-control-sm{
-  font-size: 13px;
+  font-size: 12px;
 }
 
 #notesField {
-  font-size: 13px;
+  font-size: 12px;
 }
 
 #Stages {
-margin-bottom: 12px;
+margin-bottom: 15px;
 }
 
 #addInfoPage {
-  margin: 5px;
+  margin: 12px;
 }
 
 /* AddInfo Page CSS items */
 #mainInfo {
   margin-top: 15px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 55px;
 }
 
-#integration {
-  margin-right: 5px;
-}
 
