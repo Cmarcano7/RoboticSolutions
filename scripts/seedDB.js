@@ -1,10 +1,9 @@
 const mongoose = require("mongoose");
 const db = require("../models");
+require('dotenv').config();
 
-mongoose.connect(
-    process.env.MONGODB_URI ||
-    "mongodb://localhost/roboticSolutions"
-);
+const uri = process.env.ATLAS_URI;
+mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true});
 
 const reviewSeed = [
     {

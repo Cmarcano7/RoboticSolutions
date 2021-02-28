@@ -2,7 +2,9 @@ const router = require("express").Router();
 const infoController = require("../../controllers/infoController");
 
 router.route("/")
-  .get(infoController.findAll)
+  .get(infoController.findAll);
+
+router.route("/add")
   .post(infoController.create);
 
 router
