@@ -5,8 +5,8 @@ import '../../process.css';
 
 function Validation() {
     return(
-        <form id='Stages' fluid='md'>
-            <h5>Validation</h5>
+        <form id='validation' fluid='md'>
+            <h5 id='Stages'>Validation</h5>
             <div id='vFormGroup'className='formLabel-group'>
                 <label id='vFormLabel'>
                 Validation Location:</label>
