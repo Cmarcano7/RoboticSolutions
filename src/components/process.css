@@ -34,7 +34,7 @@ input {
     float:left; width:110px; text-align:left; margin-right:5px;
 
 }#vFormGroup{
-    display:inline-flex;
+    display:flex;
     flex-direction: row;
     align-items: center;
 }

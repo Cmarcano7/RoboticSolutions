@@ -7,7 +7,7 @@ import AddInfoFooter from "../../components/AddInfoFooter";
         render() {
             return (
              <div>
-                <Container id="mainInfo">
+                <Container id="addInfo">
                     <AddInfoGroup/>
                 </Container>
                 <footer id='footer'>

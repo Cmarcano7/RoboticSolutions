@@ -13,16 +13,17 @@ const history = useHistory();
     }
 
         return(
-            <div className="mainFooter">  
-                <Navbar bg="light" expand="lg" fixed='bottom'>
-                    <Nav className="container-fluid">
-                        <Version />
-                        <Nav.Item className="ml-auto">
-                        <Button size="sm" id = "NewItem" variant="outline-dark" onClick={routeChange}>New Line Item</Button>
-                        </Nav.Item>
-                    </Nav>
-                </Navbar>
-            </div>
+            <Navbar collapseOnSelect expand="lg" bg="light" fixed='bottom'>
+                <Version />
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">               
+                    <Nav className="mr-auto">
+                        </Nav>
+                        <Nav className='justify-content-end'>
+                        <Button size="sm" id="NewItem" variant="outline-dark" onClick={routeChange}>New Line Item</Button>
+                        </Nav>
+                        </Navbar.Collapse>
+            </Navbar>
         )
 }
 

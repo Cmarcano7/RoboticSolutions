@@ -13,17 +13,18 @@ function AddInfoFooter() {
         }
 
         return(
-            <div className="addInfoFooter">  
-                <Navbar bg="light" expand="lg" >
-                    <Nav className="container-fluid">
-                        <Version />
-                        <Nav.Item className="ml-auto">
-                        <Button size="sm" id = "UpdateBtn" variant="outline-dark" onClick={routeChange}>Update</Button>
-                        <Button size="sm" id = "AddBtn" variant="outline-dark" onClick={routeChange}>Add</Button>
-                        </Nav.Item>
+            <Navbar collapseOnSelect expand="lg" bg="light" fixed='bottom'>
+                <Version />
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="mr-auto">
                     </Nav>
-                </Navbar>
-            </div>
+                    <Nav className='justify-content-end'>
+                        <Button className='mr-sm-3' size="sm" id="UpdateBtn" variant="outline-dark" onClick={routeChange}>Update</Button>
+                        <Button className='mr-sm-5' size="sm" id='AddBtn' variant="outline-dark" onClick={routeChange}>Add</Button>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
         )
 }
 export default AddInfoFooter;
