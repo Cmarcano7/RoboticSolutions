@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import NavBar from './components/NavBar';
 import MainTable from './pages/Main';
 import AddInfo from './pages/AddInfo';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
