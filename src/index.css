@@ -17,13 +17,16 @@ code {
   float:right;
 }
 
+#logoTitle {
+  float:left;
+}
 /* Header CSS Code */
 #division, #logInInfo {
   font-size: 15px ;
 }
 
 #SignOutBtn {
-  float: right;
+  margin-inline-end: 65px;
 }
 
 /* MainFooter CSS Code */
@@ -31,8 +34,9 @@ code {
   color: white;
   background-color: blue;
   font-weight: bold;
-  float: right;
-  font-size: 12px;
+  font-size: 15px;
+  width:140px;
+  margin-inline-end: 65px;
 }
 
 /* VersionInfo CSS Code */
@@ -46,15 +50,12 @@ code {
   color: white;
   background-color: red;
   font-weight: bold;
-  float: right;
-  margin-right: 8px;
 }
 
 #UpdateBtn {
   color: white;
   background-color: blue;
   font-weight: bold;
-  float: right;
 }
 
 #inputLabels {
@@ -70,17 +71,41 @@ code {
 }
 
 #Stages {
-margin-bottom: 15px;
+margin-bottom: 20px;
+margin-top:15px;
+text-decoration: underline;
 }
 
+.col-sm {
+  margin-bottom: 10px;
+}
+
+/* AddInfo Page CSS items */
 #addInfoPage {
   margin: 12px;
 }
 
-/* AddInfo Page CSS items */
-#mainInfo {
-  margin-top: 15px;
+#addInfo {
+  margin-top: 115px;
   margin-left: 55px;
+  position: relative;
+  overflow: auto;
+  padding-bottom: 55px;
 }
 
+/* MainInfo Page CSS items */
+#mainInfo {
+  margin-top: 115px;
+  margin-left: 55px;
+  padding-bottom: 10px;
+  max-width:max-content;
+}
 
+.navbar-item {
+  display: flex;
+  align-items: center;
+}
+
+#dTable {
+  width:auto;
+}
