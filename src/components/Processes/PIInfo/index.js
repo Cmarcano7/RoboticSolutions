@@ -5,7 +5,7 @@ import '../../process.css';
 function PlantIntegration() {
     return(
     <form id='integration'>
-            <h5  id='Stages'>Plant & Integrator Infomation</h5>
+            <h5  id='Stages'>Plant & Integrator Information</h5>
             <div id='formGroup'className='formLabel-group'>
                 <label id='formLabel'>
                 Robot Type/Model:</label>
