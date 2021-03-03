@@ -7,8 +7,8 @@ const infoSchema = new Schema({
     serialNumber: {type:String, required:true},
     endUser: { type:String, required: true},
     integrator: { type:String, required: true},
-    stationID: { type:String, required: true},
-    system: { type:String, required:true},
+    stationID: { type:String },
+    system: { type:String },
     partDescriptionNumber: { type:String, required:true},
     review: { type: Schema.Types.ObjectId, ref: "Review"}
 });
