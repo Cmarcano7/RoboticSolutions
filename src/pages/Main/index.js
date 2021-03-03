@@ -7,7 +7,7 @@ import { Container } from "react-bootstrap";
         render() {
             return (
                 <div>
-                <Container fluid>
+                <Container id='mainInfo'>
                     <DataSheet/>                    
                 </Container>
                 <footer>
