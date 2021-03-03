@@ -15,13 +15,13 @@ module.exports = {
   },
   findBySerialNumber: function(req, res) {
     db.Info
-      .find(req.params.serialNumber)
+      .findOne(req.params)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findByEndUser: function(req, res) {
     db.Info
-      .find(req.params.endUser)
+      .find(req.params)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -39,7 +39,7 @@ module.exports = {
   },
   remove: function(req, res) {
     db.Info
-      .find(req.params.serialNumber)
+      .find(req.params)
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
