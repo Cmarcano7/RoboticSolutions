@@ -176,17 +176,22 @@ const columns = [
       style: {
           borderBottomStyle: 'solid',
           borderBottomWidth: '1px',
-          fontSize: '12px',
+          fontSize: '11px',
+          width: '9rem',
+          subHeaderAlign: 'center',
+          paddingBottom: '5px',    
       },
     },
 
     cells: {
-      style: {        
+      style: {  
+          borderLeftStyle: 'solid',
+          borderLeftWidth: '1px',      
           borderRightStyle: 'solid',
           borderRightWidth: '1px',
           borderBottomStyle: 'solid',
           borderBottomWidth: '1px',
-          fontSize: '11px',        
+          fontSize: '10px',       
       },
     },
   };
@@ -195,7 +200,7 @@ const columns = [
 class DataSheet extends Component {
   render() {
     return (
-      <Row>
+      <Row id='dTable'>
       <DataTable
         title="Master Dress Pack Buy-Off Matrix "
         columns={columns}
@@ -203,6 +208,7 @@ class DataSheet extends Component {
         customStyles={customStyles}
         highlightOnHover
         dense
+        responsive
       />
       </Row>
     );
