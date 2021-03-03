@@ -1,20 +1,38 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import {Row} from 'react-bootstrap';
 import DataTable from 'react-data-table-component';
+import API from '../../utils/API';
 
-const data = [{ id: 1, rtm: 'R2000iC210F', robapp: 'Drill+Vision', SNF: 'F196331' }, { id: 2, rtm: 'R2000iC210F', robapp: 'Drill+Vision', SNF: 'F196332' }];
+function Info () {
+  const [info, setInfo] = useState([]);
+  useEffect(() => {
+    loadInfo()
+  }, []);
 
-// const subheader = [
-//   {
-//     name: 'Plant & Integrator Information',
-//   },
-//   {
-//     name: 'Initial Review',
-//   },
-//   {
-//     name: 'Validation (Final Review)',
-//   }
-// ]
+  function loadInfo() {
+    API.getAllInfo()
+    .then(res => 
+      setInfo(res.data)
+    )
+    .catch(err => console.log(err)); 
+  };
+
+  console.log(info)
+
+  return (
+    <Row id='dTable'>
+    <DataTable
+      title="Master Dress Pack Buy-Off Matrix "
+      columns={columns}
+      data = { info }
+      customStyles={customStyles}
+      highlightOnHover
+      dense
+      responsive
+    />
+    </Row>
+  );
+};
 
 const columns = [
 
@@ -27,50 +45,50 @@ const columns = [
   
   {
     name: 'Robot Type/Model',
-    selector: 'rtm',
+    selector: 'robotModel',
     sortable: true,
     center: true,
     wrap: true,
   },
   {
     name: 'Robot Application',
-    selector: 'robapp',
+    selector: 'robotApplication',
     sortable: true,
     center: true,
   },
   {
     name: 'Serial Number/F #',
-    selector: 'SNF',
+    selector: 'serialNumber',
     sortable: true,
     center: true,
   },
   {
     name: 'Customer & Plant Location',
-    selector: 'CPL',
+    selector: 'endUser',
     sortable: true,
     center: true,
   },
   {
     name: 'Integrator/ Line Owner',
-    selector: 'InLO',
+    selector: 'integrator',
     sortable: true,
     center: true,
   },
   {
     name: 'Station / Robot ID',
-    selector: 'StaRobId',
+    selector: 'stationID',
     sortable: true,
     center: true,
   },
   {
     name: 'System / Line',
-    selector: 'SysLine',
+    selector: 'system',
     sortable: true,
     center: true,
   },
   {
     name: 'Leoni PD#',
-    selector: 'LeoniPD',
+    selector: 'partDescriptionNumber',
     sortable: true,
     center: true,
   },
@@ -196,22 +214,4 @@ const columns = [
     },
   };
 
-
-class DataSheet extends Component {
-  render() {
-    return (
-      <Row id='dTable'>
-      <DataTable
-        title="Master Dress Pack Buy-Off Matrix "
-        columns={columns}
-        data={data}
-        customStyles={customStyles}
-        highlightOnHover
-        dense
-        responsive
-      />
-      </Row>
-    );
-  }
-};
-export default DataSheet;
+export default Info;
