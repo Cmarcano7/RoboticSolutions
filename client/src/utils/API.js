@@ -17,6 +17,6 @@ export default {
     return axios.delete("/api/info/" + id);
   },
   saveInfo: function(infoData) {
-    return axios.post("/api/info", infoData);
+    return axios.post("/add/api/", infoData);
   }
 };
