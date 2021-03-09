@@ -4,6 +4,10 @@
   "private": true,
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "14.x",
+    "npm": "7.x"
+  },
   "dependencies": {
     "axios": "^0.21.1",
     "body-parser": "^1.19.0",
@@ -23,7 +27,7 @@
     "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm start"
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -39,5 +43,5 @@
   "bugs": {
     "url": "https://github.com/Cmarcano7/RoboticSolutions/issues"
   },
-  "homepage": "https://vast-depths-21243.herokuapp.com/"
+  "homepage": ""
 }
